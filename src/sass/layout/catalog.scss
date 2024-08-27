@@ -1,0 +1,32 @@
+@import '../abstracts/variables';
+
+
+.catalog {
+    display: flex;
+    height: 1076px;
+    background-color: $black;
+
+    .catalog-content {
+        flex: 1;
+        display: flex;
+        padding-left: 20px;
+    }
+
+    .catalog-background {
+        width: 50%; 
+        background-image: url("../../../public/images/catalog_background.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 415px 0px 0px 415px;;
+    }
+
+    &-title {
+        font-size: 36px;
+        color: $violet;
+        font-weight: 600;
+        line-height: normal;
+        text-align: center;
+    }
+}
+
