@@ -1,0 +1,80 @@
+@import '../abstracts/variables';
+
+.contacts-wrap {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  position: relative;
+
+  .contacts {
+    background-color: $black;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    height: auto;
+
+    &-background {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      width: 50%;
+      height: 100%;
+      background-image: url('../../../public/images/catalog_background.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 0 300px 300px 0;
+      z-index: 1;
+    }
+
+    &-title {
+      font-size: 36px;
+      color: $violet;
+      font-weight: 600;
+      line-height: normal;
+      text-align: right;
+      padding-top: 40px;
+      margin-right: 220px;
+    }
+
+    &-line {
+      width: 491px;
+      border: 0;
+      height: 2px;
+      background-color: $violet;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .contacts-address {
+      background: rgba(185, 106, 127, 0.7);
+      z-index: 3;
+      position: relative;
+      padding: 64px;
+      margin-top: 140px;
+      height: 564px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .address-video {
+        width: 560px;
+        max-height: 360px; 
+        object-fit: cover; 
+        border: 2px solid $violet;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); // Тінь для відео
+      }
+
+      a {
+        color: $white;
+        font-style: normal;
+        font-size: 20px;
+      }
+
+      p {
+        color: $white;
+        font-size: 20px;
+      }
+    }
+  }
+}

@@ -1,5 +1,13 @@
-.div(id="contacts")
-    h2 Наші контакти
-    address
-        a(href="tel:+380506898156") +380 50 689 8156
-        p м. Черкаси, бул Шевченка
+.contacts-wrap(id="contacts")
+    .contacts
+        h2.contacts-title Наші контакти
+        hr.contacts-line
+        address.contacts-address
+            .address-list
+                a(href="tel:+380506898156") +380 50 689 8156
+                p м. Черкаси, бул Шевченка
+            video.address-video(
+                src="../../public/images/find-us.mp4"
+                type="video/mp4"
+                controls)
+        .contacts-background

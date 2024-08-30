@@ -1,32 +1,158 @@
 @import '../abstracts/variables';
-
+@import '../abstracts/mixins';
 
 .catalog {
-    display: flex;
-    height: 1076px;
-    background-color: $black;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  background-color: $black;
 
-    .catalog-content {
-        flex: 1;
-        display: flex;
-        padding-left: 20px;
+  .catalog-background {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-image: url('../../../public/images/catalog_background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 415px 0 0 415px;
+    z-index: 1;
+
+    @include v-sm {
+      display: none;
+    }
+  }
+
+  .catalog-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include v-sm {
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
-    .catalog-background {
-        width: 50%; 
-        background-image: url("../../../public/images/catalog_background.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        border-radius: 415px 0px 0px 415px;;
+    .catalog-title {
+      font-size: 36px;
+      color: $violet;
+      font-weight: 600;
+      line-height: normal;
+      text-align: left;
+      padding-top: 40px;
+      margin-bottom: 5px;
+      margin-left: 250px;
+
+      @include v-sm {
+        font-size: 32px;
+        margin-left: 24px;
+      }
     }
 
-    &-title {
-        font-size: 36px;
-        color: $violet;
-        font-weight: 600;
-        line-height: normal;
-        text-align: center;
+    .catalog-line {
+      width: 491px;
+      border: 0;
+      height: 2px;
+      background-color: $violet;
+      margin-right: auto;
+      margin-left: 0;
+
+      @include v-sm {
+        width: 350px;
+      }
     }
+
+    .card-catalog {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      width: 1312px;
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include v-xs {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        width: auto;
+      }
+
+      @include v-sm {
+        flex-wrap: wrap;
+        width: auto;
+      }
+
+      @include v-xl {
+        width: auto;
+      }
+
+      .catalog-item {
+        position: relative;
+        width: calc((100% - 2 * 20px) / 3);
+        width: 320px;
+        margin-bottom: 30px;
+
+        .img-overlay {
+          position: relative;
+
+          .img-catalog {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+          }
+
+          .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($blue, 0.8);
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 16px;
+            opacity: 0;
+            overflow: hidden;
+            transition: opacity 0.3s ease-in-out;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+
+        .info-catalog {
+          margin-top: 10px;
+          text-align: center;
+
+          h3 {
+            font-size: 24px;
+            color: $violet;
+            font-weight: 600;
+          }
+
+          p {
+            font-size: 16px;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
 }
-

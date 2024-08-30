@@ -1,0 +1,68 @@
+@import '../abstracts/variables';
+
+.about {
+  background-color: $black;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 60px;
+
+  &-title {
+    font-size: 36px;
+    color: $violet;
+    font-weight: 600;
+    line-height: normal;
+    margin-right: 350px;
+    text-align: right;
+    padding-top: 40px;
+    margin-bottom: 5px;
+  }
+
+  &-line {
+    width: 491px;
+    border: 0;
+    height: 2px;
+    background-color: $violet;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  &-descr {
+    color: $white;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 30px;
+  }
+
+  &-descr2 {
+    color: $white;
+    font-size: 20px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    font-weight: 400;
+  }
+
+  &-advantages {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    &-item {
+      color: $white;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+
+      &-img {
+        width: 650px;
+        height: 450px;
+        object-fit: cover;
+        flex-shrink: 0;
+        border-radius: 15px;
+      }
+    }
+  }
+}
