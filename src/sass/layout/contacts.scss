@@ -47,33 +47,57 @@
 
     .contacts-address {
       background: rgba(185, 106, 127, 0.7);
+      border-radius: 10px;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.2);
       z-index: 3;
       position: relative;
-      padding: 64px;
+      bottom: 50px;
+      padding: 20px;
       margin-top: 140px;
-      height: 564px;
+      height: auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
+      .address-list {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        a, h3, p {
+          font-family: 'Source Sans 3', sans-serif;
+          color: $white;
+          font-style: normal;
+          font-size: 20px;
+          width: 400px;
+        }
+
+        .hours {
+          font-style: italic;
+          font-weight: bold;
+        }
+      }
+
       .address-video {
-        width: 560px;
-        max-height: 360px; 
-        object-fit: cover; 
-        border: 2px solid $violet;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); // Тінь для відео
-      }
+        h3 {
+          margin-bottom: 20px;
+          color: $white;
+          font-family: 'Source Sans 3', sans-serif;
+          font-style: normal;
+          font-size: 26px;
+          text-align: center;
+          font-weight: 400;
+        }
 
-      a {
-        color: $white;
-        font-style: normal;
-        font-size: 20px;
-      }
-
-      p {
-        color: $white;
-        font-size: 20px;
+        video {
+          width: 760px;
+          max-height: 460px;
+          object-fit: cover;
+          border: 2px solid $violet;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
       }
     }
   }
