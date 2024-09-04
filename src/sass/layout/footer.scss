@@ -14,12 +14,15 @@
 
   &-pages {
     flex-shrink: 1;
-    font-family: 'Source Sans 3', sans-serif;
     color: $white;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 32px;
+
+    p {
+      font-weight: 400;
+    }
   }
 
   &-social {
@@ -27,6 +30,14 @@
     font-family: 'Source Sans 3', sans-serif;
     color: $white;
     text-align: center;
+
+    .social-descr {
+      color: $white;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 10px;
+    }
 
     .social-img {
       display: block;
@@ -36,7 +47,6 @@
 
   &-contacts {
     flex-shrink: 1;
-    font-family: 'Source Sans 3', sans-serif;
     color: $white;
     text-align: center;
     display: flex;
@@ -45,8 +55,16 @@
     margin-top: 40px;
     margin-bottom: 50px;
 
-    .contacts-tel {
+    .contacts-tel p {
+      font-weight: 400;
+    }
 
+    .contacts-email p {
+      font-weight: 400;
+    }
+
+    .contacts-address p {
+      font-weight: 400;
     }
   }
 }

@@ -2,12 +2,24 @@
   background-color: $black;
   padding-left: 20px;
   padding-right: 20px;
+  height: auto;
 
   &-descr {
     color: $white;
     padding-top: 20px;
     padding-bottom: 20px;
     font-weight: 400;
+
+    .reviews-link2 {
+      margin-left: 40px;
+      padding: 15px;
+      background-color: $violet2;
+      color: $white;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      border-radius: 4px;
+    }
   }
 
   &-title {
